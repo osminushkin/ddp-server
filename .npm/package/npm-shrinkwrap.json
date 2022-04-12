@@ -1,0 +1,9 @@
+{
+  "lockfileVersion": 1,
+  "dependencies": {
+    "uWebSockets.js": {
+      "version": "git+https://github.com/unetworking/uWebSockets.js.git#v20.6.0",
+      "resolved": "git+https://github.com/unetworking/uWebSockets.js.git#a58e810e47a23696410f6073c8c905dc38f75da5"
+    }
+  }
+}
