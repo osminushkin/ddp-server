@@ -44,11 +44,15 @@ StreamServer = function () {
     },
 
     upgrade(res, req, context) {
+      const headers = {};
+
+      req.forEach((key, value) => {
+        headers[key] = value;
+      });
+
       res.upgrade(
         {
-          headers: {
-            'x-forwarded-for': req.getHeader('x-forwarded-for')
-          }
+          headers
         },
         req.getHeader('sec-websocket-key'),
         req.getHeader('sec-websocket-protocol'),
