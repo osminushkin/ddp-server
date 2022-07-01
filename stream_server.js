@@ -16,6 +16,7 @@ StreamServer = function () {
 
   self.uwsApp.ws('/*', {
     maxBackpressure: 16 * 1024 * 1024,
+    maxPayloadLength: 48 * 1024,
 
     open(socket) {
       socket.on = function(event, callback) {
