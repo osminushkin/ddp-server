@@ -480,7 +480,7 @@ Object.assign(Session.prototype, {
     }
 
     if (self.socket) {
-      // self.socket.close();
+      self.socket.close();
       self.socket._meteorSession = null;
     }
 
@@ -1544,7 +1544,7 @@ Object.assign(Server.prototype, {
    */
   setPublicationStrategy(collectionName, strategy) {
     if (!Object.values(publicationStrategies).includes(strategy)) {
-      throw new Error(`Invalid merge strategy: ${strategy} 
+      throw new Error(`Invalid merge strategy: ${strategy}
         for collection ${collectionName}`);
     }
     this._publicationStrategies[collectionName] = strategy;
