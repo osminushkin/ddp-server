@@ -63,6 +63,7 @@ StreamServer = function () {
     },
 
     close(socket) {
+      socket.isClosed = true
       self.openSockets.delete(socket);
       self.closeListeners.get(socket)();
     },
@@ -73,13 +74,15 @@ StreamServer = function () {
     }
   })
 
-  self.uwsApp.listen(uwsPort, (listenSocket) => {
-    if (listenSocket) {
-      console.log(`uWebSockets.js listening to port ${uwsPort}`);
-    } else {
-      throw new Error(`uWebSockets.js could not listen to port ${uwsPort}!`);
-    }
-  });
+  setTimeout(() => {
+    self.uwsApp.listen(uwsPort, (listenSocket) => {
+      if (listenSocket) {
+        console.log(`uWebSockets.js listening to port ${uwsPort}`);
+      } else {
+        throw new Error(`uWebSockets.js could not listen to port ${uwsPort}!`);
+      }
+    });
+  }, 1500)
 };
 
 Object.assign(StreamServer.prototype, {
