@@ -74,7 +74,7 @@ StreamServer = function () {
     }
   })
 
-  setTimeout(() => {
+  WebApp.onListening(() => {
     self.uwsApp.listen(uwsPort, (listenSocket) => {
       if (listenSocket) {
         console.log(`uWebSockets.js listening to port ${uwsPort}`);
@@ -82,7 +82,7 @@ StreamServer = function () {
         throw new Error(`uWebSockets.js could not listen to port ${uwsPort}!`);
       }
     });
-  }, 1500)
+  })
 };
 
 Object.assign(StreamServer.prototype, {
