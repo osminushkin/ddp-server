@@ -1,9 +1,24 @@
 {
-  "lockfileVersion": 1,
+  "lockfileVersion": 4,
   "dependencies": {
+    "lodash.isempty": {
+      "version": "4.4.0",
+      "resolved": "https://registry.npmjs.org/lodash.isempty/-/lodash.isempty-4.4.0.tgz",
+      "integrity": "sha512-oKMuF3xEeqDltrGMfDxAPGIVMSSRv8tbRSODbrs4KGsRRLEhrW8N8Rd4DRgB2+621hY8A8XwwrTVhXWpxFvMzg=="
+    },
+    "lodash.isobject": {
+      "version": "3.0.2",
+      "resolved": "https://registry.npmjs.org/lodash.isobject/-/lodash.isobject-3.0.2.tgz",
+      "integrity": "sha512-3/Qptq2vr7WeJbB4KHUSKlq8Pl7ASXi3UG6CMbBm8WRtXi8+GHm7mKaU3urfpSEzWe2wCIChs6/sdocUsTKJiA=="
+    },
+    "lodash.isstring": {
+      "version": "4.0.1",
+      "resolved": "https://registry.npmjs.org/lodash.isstring/-/lodash.isstring-4.0.1.tgz",
+      "integrity": "sha512-0wJxfxH1wgO3GrbuP+dTTk7op+6L41QCXbGINEmD+ny/G/eCqGzxyCsh7159S+mgDDcoarnBw6PC1PS5+wUGgw=="
+    },
     "uWebSockets.js": {
-      "version": "git+https://github.com/unetworking/uWebSockets.js.git#v20.6.0",
-      "resolved": "git+https://github.com/unetworking/uWebSockets.js.git#a58e810e47a23696410f6073c8c905dc38f75da5"
+      "version": "20.52.0",
+      "resolved": "git+ssh://git@github.com/unetworking/uWebSockets.js.git#cfc9a40d8132a34881813cec3d5f8e3a185b3ce3"
     }
   }
 }
